@@ -1,0 +1,58 @@
+const express = require('express');
+const bodyParser = require ('body-parser');
+const https = require ('https');
+const request = require ('request');
+
+const app = express();
+      app.use(bodyParser.urlencoded({extended:true})); 
+      app.use(express.static("public"));
+    //   app.use(bodyParser.json());
+
+
+app.get("/",function(req,res){
+    const url = "https://google.com";
+    https.get(url, function(response){
+        console.log(response.statusCode);
+        response.on("data", function(data){
+            const receiveData = JSON.parse(data);
+            var TempW = receiveData.main.temp;
+        res.write("pop here");
+        res.write("Hello there!");
+        res.write("short clear");
+        res.send();
+        });
+    });
+    https.request(url, option , function(response){
+        
+    })
+});
+app.get("/about", function(req,res){
+    res.sendFile(__dirname+"/about.html");
+});
+app.post("/", function(req,res){
+    var name = parseFloat(req.body.nem);
+});
+
+app.listen(3000,function(){
+console.log("server is running on port 3000");
+});
+
+
+const query = "Dodoma";
+    const apiKey = "194444ab308da66000500f7c24212114"
+    const unit = "metric";
+    const url = "https://api.openweathermap.org/data/2.5/weather?q="+query+"&units="+unit+"&appid="+apiKey;
+    https.get(url,(response)=>{
+        response.on('data', (data)=>{
+            const receiveD = JSON.parse(data);
+            const temp = receiveD.main.temp;
+            const Description = receiveD.weather[0].description;
+            const icon = receiveD.weather[0].icon;
+            const imageURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
+
+            res.write(`<h1>The weather is currently ${Description}</h1><br/>
+                        <p>The Temperature in ${Dodoma} is : ${temp}</p>`);
+            res.write('<img src='+imageURL+'>');
+            res.send();
+        });
+    });
