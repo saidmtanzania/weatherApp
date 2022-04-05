@@ -1,3 +1,4 @@
+// jshint esversion:6
 const express = require('express');
 const bodyParser = require('body-parser');
 const https = require('https');
@@ -33,8 +34,8 @@ app.post("/", (req,res)=>{
             res.send();
         });
     });
-})
+});
 
 app.listen(3000, ()=>{
     console.log("server is up and running :D");
-})
+});
