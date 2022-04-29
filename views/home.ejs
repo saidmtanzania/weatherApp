@@ -1,13 +1,20 @@
 <%- include("partials/header") -%>
-<div class="row">
-    <div class="col-md-8 p-5">
-        <h1>Home</h1>
-        <p class="p-2"><%=StartContent %></p>
+<div class="row mt-5">
+  <div class="col-md-9 p-4">
+    <h4 class="card-title">Home is Home sweet home</h4>
+    <img src="/image/logo.jpg" class="img-thumbnail float-start" style="width: 120px; height: 120px; margin-right: 5px" alt="Cinque Terre"/>
+    <p class="card-text"><%=StartContent %><a href="#" class="btn btn-primary float-end"s>Read more</a>
+    </p>
+  </div>
+  <div class="col-md-3 p-4">
+    <div class="card" style="width: 200px">
+      <img class="card-img-top" src="/image/logo.jpg" alt="Card image" />
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text.</p>
+      </div>
     </div>
-    <div class="col-md-4 p-5">
-        <h1>About us</h1>
-        <p>This is new Work in here!</p>
-    </div>
+  </div>
 </div>
-    
+
 <%- include("partials/footer") -%>
