@@ -19,10 +19,10 @@ app.get("/", (req,res)=>{
     res.render("home",{title:tcontento,StartContent:homeStartingContent});
 });
 app.get('/about',(req,res)=>{
-    res.render("home",{title:Talk,StartContent:Mtn});
+    res.render("about",{title:Talk,StartContent:Mtn});
 });
 app.get('/contact',(req,res)=>{
-    res.render("home",{title:Talk,StartContent:Mtn});
+    res.render("contact",{title:Talk,StartContent:Mtn});
 });
 app.post("/", (req,res)=>{
     const city = req.body.cityName;
