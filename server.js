@@ -10,12 +10,19 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies.";
-
+const Talk = "404";
+const tcontento = "Ut enim ad minim veniam, quis nostrud exercitation ullamco "
+const Mtn = "Page under maintenance";
 
 
 app.get("/", (req,res)=>{
-    res.render("home",{StartContent:homeStartingContent
-    });
+    res.render("home",{title:tcontento,StartContent:homeStartingContent});
+});
+app.get('/about',(req,res)=>{
+    res.render("home",{title:Talk,StartContent:Mtn});
+});
+app.get('/contact',(req,res)=>{
+    res.render("home",{title:Talk,StartContent:Mtn});
 });
 app.post("/", (req,res)=>{
     const city = req.body.cityName;

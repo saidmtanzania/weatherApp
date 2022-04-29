@@ -1,13 +1,73 @@
 <%- include("partials/header") -%>
+<div class="row mt-1">
+    <div class="col-md-12">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/image/1.jpg" alt="Los Angeles" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h3>Los Angeles</h3>
+                        <p>We had such a great time in LA!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/image/2.jpg" alt="Chicago" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h3>Guangzhou</h3>
+                        <p>We had such a great time in LA!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/image/3.jpg" alt="New York" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h3>France</h3>
+                        <p>We had such a great time in LA!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</div>
 <div class="row mt-5">
   <div class="col-md-9 p-4">
-    <h4 class="card-title">Home is Home sweet home</h4>
+    <h4 class="card-title"><a class="nav-link" href="#"><%=title %></a></h4>
     <img src="/image/logo.jpg" class="img-thumbnail float-start" style="width: 120px; height: 120px; margin-right: 5px" alt="Cinque Terre"/>
-    <p class="card-text"><%=StartContent %><a href="#" class="btn btn-primary float-end"s>Read more</a>
+    <p class="card-text"><%=StartContent %><a href="#" class="btn btn-primary float-end">Read more</a>
     </p>
+    <hr/>
+     <h4 class="card-title"><a class="nav-link" href="#"><%=title %></a></h4>
+     <img src="/image/logo.jpg" class="img-thumbnail float-start" style="width: 120px; height: 120px; margin-right: 5px"
+         alt="Cinque Terre" />
+     <p class="card-text"><%=StartContent %><a href="#" class="btn btn-primary float-end">Read more</a>
+     </p>
+     <hr />
+      <h4 class="card-title"><a class="nav-link" href="#"><%=title %></a></h4>
+      <img src="/image/logo.jpg" class="img-thumbnail float-start"
+          style="width: 120px; height: 120px; margin-right: 5px" alt="Cinque Terre" />
+      <p class="card-text"><%=StartContent %><a href="#" class="btn btn-primary float-end">Read more</a>
+      </p>
+      <hr />
+      <ul class="pagination pagination-sm float-end mt-3">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
   </div>
   <div class="col-md-3 p-4">
-    <div class="card" style="width: 200px">
+    <div class="card justify-content-center">
       <img class="card-img-top" src="/image/logo.jpg" alt="Card image" />
       <div class="card-body">
         <h4 class="card-title">John Doe</h4>
